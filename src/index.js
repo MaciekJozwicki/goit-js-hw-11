@@ -38,10 +38,9 @@ function generate(response) {
     }
     loadBtnEl.classList.remove('hidden')
     response.hits.map(element => {
-        let photoCard = document.createElement('a');
+        let photoCard = document.createElement('div');
         photoCard.href = element.largeImageURL;
         photoCard.classList.add('photo-card');
-
         let img = document.createElement('img');
         img.src = element.previewURL
         img.alt = element.tags
